@@ -8,26 +8,11 @@
     
 */
 
-/*const getWeather=(codigo)=>{
-     let message;
-    if(codigo===0){
-        message="Clear Sky";
-    }else if( codigo===1 ||codigo===2 ||codigo===3  ){
-        message="Mainly clear, partly cloudy, and overcast";
-    }else if(codigo===45 || codigo===48){
-        message="Fog and depositing rime fog";
-    }else{
-        message="no definido";
-    }
-    return message;
-   
-}*/
-
-//console.log(getWeather(88));
 
 
 
 
+/*
 //asignamos el valor del id a una variable const
 const dino=document.getElementById("dinosaurio");
 //valor boleano para determinar la felicidad
@@ -49,12 +34,77 @@ boton.onclick= function(){
 
     
 };
-    
+
+*/
+/*
+    const getAccessLevel = ( role ) => {
+    let accessLevel;
+    switch ( role ) {
+
+        case "super admin":
+        case "admin":
+            accessLevel = "Acceso completo al sistema";
+            break;
+        case "editor":
+            accessLevel = "Acceso para editar contenido";
+            break;  
+        case "viewer":
+            accessLevel = "Acceso solo para ver contenido";
+            break;
+        default:
+            accessLevel = "Acceso denegado";
+    }
+    return accessLevel;
+};
+console.log( getAccessLevel("editor") ); // Acceso para editar contenido*/
 
 
 
+const getWeather=(codigo)=>{
+     let message;
+    if(codigo===0){
+        message="Clear Sky";
+    }else if( codigo===1 ||codigo===2 ||codigo===3  ){
+        message="Mainly clear, partly cloudy, and overcast";
+    }else if(codigo===45 || codigo===48){
+        message="Fog and depositing rime fog";
+    }else{
+        message="no definido";
+    }
+    return message;
+   
+}
 
 
+const getWeatherSwitch=(codigo)=>{
+let message;
+
+switch (codigo) {
+    case 0:
+        message="Clear Sky";
+    break;
+
+    case 1:
+    case 2:
+    case 3:
+        message="Mainly clear, partly cloudy, and overcast";
+    break;
+    case 45:
+        message="Fog and depositing rime fog";  
+    break;
+    case 48:
+        message="Fog and depositing rime fog";
+    break;
+    default:
+        message="No definido"
+        break;
+}
+return message;
+}
+//console.log(getWeatherSwitch(48));
 
 
-
+const esPar=(numero)=>{
+    return numero% 2===0 ? "Es par ": "No es par";
+}
+console.log(esPar(14));
